@@ -10,7 +10,7 @@ contract Owned {
 
     address public owner;
 
-    function Owned() {
+    function Owned() public {
         owner = msg.sender;
     }
 
@@ -19,7 +19,7 @@ contract Owned {
         _;
     }
 
-    function changeOwner(address newOwner) onlyOwner returns (bool Success) {
+    function changeOwner(address newOwner) public onlyOwner returns (bool Success) {
         require(newOwner != 0);
         LogNewOwner(owner, newOwner);
 

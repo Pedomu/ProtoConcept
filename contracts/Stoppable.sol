@@ -10,7 +10,7 @@ import "./Owned.sol";
 
     bool public running;
 
-    function Stoppable() {
+    function Stoppable() public {
         running = true;
     }
 
@@ -19,7 +19,7 @@ import "./Owned.sol";
         _;
     }
 
-    function runSwitch(bool onOff) onlyOwner returns (bool success) {
+    function runSwitch(bool onOff) public onlyOwner returns (bool success) {
         running = onOff;
         return true;
     }
