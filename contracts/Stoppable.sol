@@ -1,12 +1,15 @@
 pragma solidity ^0.4.20;
 
 import "./Owned.sol";
+import "./Doctor.sol";
 
 /**
  *Base for contracts that can stopped/resumed.
  */
 
- contract Stoppable is Owned {
+ contract Stoppable is Owned, Doctor {
+
+    event LogSwitchStatus(bool SwitchStatus);
 
     bool public running;
 
@@ -19,9 +22,10 @@ import "./Owned.sol";
         _;
     }
 
-    function runSwitch(bool onOff) public onlyOwner returns (bool success) {
+    function controlSwitch(bool onOff) public onlyOwner onlyDoctor {
         running = onOff;
-        return true;
+
+        emit LogSwitchStatus(running);
     }
 
  }
