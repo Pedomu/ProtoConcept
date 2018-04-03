@@ -27,5 +27,4 @@ import "./Doctor.sol";
 
         emit LogSwitchStatus(running);
     }
-
  }
