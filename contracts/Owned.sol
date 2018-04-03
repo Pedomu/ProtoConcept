@@ -6,31 +6,43 @@ pragma solidity ^0.4.20;
 
 contract Owned {
 
-    event LogNewOwner(address oldOwner, address newOwner);
-    event LogDeleteOwner(address killOwner);
+    event LogNewOwner(string oldOwnerName, address oldOwner, string newOwnerName, address newOwner);
+    event LogDeleteOwner(string killOwnerName, address killOwner);
 
     address public owner;
+    string public ownerName;
+    string public ownerEmail;
+    string public ownerPhone;
 
     modifier onlyOwner {
         require(owner == msg.sender);
         _;
     }
 
-    function Owned() public {
+    function Owned(string _ownerName, string _ownerEmail, string _ownerPhone) public {
         owner = msg.sender;
+        ownerName = _ownerName;
+        ownerEmail = _ownerEmail;
+        ownerPhone = _ownerPhone;
     }
 
-    function changeOwner(address newOwner) public onlyOwner {
-        require(newOwner != 0);
-        emit LogNewOwner(owner, newOwner);
+    function changeOwner(address _newOwner, string _newOwnerName, string _newOwnerEmail, string _newOwnerPhone) public onlyOwner {
+        require(_newOwner != 0);
+        emit LogNewOwner(ownerName, owner, _newOwnerName, _newOwner);
 
-        owner = newOwner;
+        owner = _newOwner;
+        ownerName = _newOwnerName;
+        ownerEmail = _newOwnerEmail;
+        ownerPhone = _newOwnerPhone;
     }
 
     function deleteOwner(address outOwner) public onlyOwner {
-        emit LogDeleteOwner(outOwner);
+        emit LogDeleteOwner(ownerName, outOwner);
 
         owner = 0x0;
+        delete ownerName;
+        delete ownerEmail;
+        delete ownerPhone;
     }
 
 }
