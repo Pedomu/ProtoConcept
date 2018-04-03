@@ -42,7 +42,12 @@ contract Owned {
         owner = 0x0;
         delete ownerName;
         delete ownerEmail;
-        delete ownerPhone;
+        ownerPhone = ""; //which is more efficient?
     }
+
+    // function ownerInfo(string _ownerName) public view returns (address _infoAddress, string _infoEmail, string _infoPhone){
+    //     require(ownerName == _ownerName);
+    //     return (owner, ownerEmail, ownerPhone);
+    // }
 
 }
