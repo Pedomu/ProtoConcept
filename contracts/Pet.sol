@@ -1,13 +1,25 @@
 pragma solidity ^0.4.20;
 
-import "./Owned.sol";
+import "./Petowner.sol";
 
-contract Pet is Owned {
+contract Pet is Petowner {
 
-    struct PetInfo {
-        string petName;
-        address petAddress;
-        uint petAges; //need a update;
+    event PetInformation(string petNameInfo, uint petAgeInfo, address petAndOwnerAddress, string petOwnerNameInfo, string petOwnerPhoneInfo);
+
+    string public petName;
+    address public petAddress;
+    uint public petAges;
+
+
+    function Pet() public {
+    }
+
+    function registerPet(string _petName, uint _petAges) public onlyPetOwner {
+        petName = _petName;
+        petAddress = msg.sender;
+        petAges = _petAges;
+
+        emit PetInformation(petName, petAges, petAddress, petOwnerName, petOwnerPhone);
     }
 
 }
