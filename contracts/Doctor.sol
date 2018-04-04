@@ -1,31 +1,41 @@
 pragma solidity ^0.4.20;
 
+import "./Stoppable.sol";
+
 /**
  *Base for contract that work with the abstraction of medical.
  */
 
-contract Doctor {
+contract Doctor is Stoppable {
 
-    event LogEnrollDoctor(address addDoctorAccount);
+    event LogEnrollDoctor(address doctorAccount);
     event LogDeleteDoctor(address delDoctorAccount);
 
     address public doctor;
+    address public preDoctor;
 
     modifier onlyDoctor{
         require(msg.sender == doctor);
         _;
     }
 
-    function enrollDoctor(address inDoctor) public {
-        require(inDoctor != 0);
-        emit LogEnrollDoctor(doctor);
-
-        doctor = inDoctor;
+    function Doctor() public {
+        preDoctor = msg.sender;
+        enrollDoctor();
     }
 
-    function deleteDoctor(address outDoctor) public onlyDoctor {
-        emit LogDeleteDoctor(outDoctor);
+    function enrollDoctor() public {
+        require(status);
+        emit LogEnrollDoctor(preDoctor);
+
+        doctor = preDoctor;
+        preDoctor = 0x0;
+    }
+
+    function deleteDoctor(address delDoctor) public onlyDoctor {
+        emit LogDeleteDoctor(delDoctor);
 
         doctor = 0x0;
     }
+
 }

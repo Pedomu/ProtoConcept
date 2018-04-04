@@ -16,6 +16,7 @@ import "./Owned.sol";
 
     function Stoppable() public {
         running = true;
+        status = false;
     }
 
     modifier onlyIfRunning {
