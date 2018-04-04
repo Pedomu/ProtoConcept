@@ -12,13 +12,14 @@ contract Pet is Petowner {
 
 
     function Pet() public {
+        petAges = 0;
     }
 
     function registerPet(string _petName, uint _petAges) public onlyPetOwner {
         petName = _petName;
         petAddress = msg.sender;
         petAges = _petAges;
-
+        
         emit PetInformation(petName, petAges, petAddress, petOwnerName, petOwnerPhone);
     }
 
