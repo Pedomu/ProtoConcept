@@ -8,15 +8,12 @@ import "./Owned.sol";
 
  contract Stoppable is Owned {
 
-     event LogSwitchStatus(bool switchStatus);
-     event DoctorLicense(bool doctorStatus);
+    event LogSwitchStatus(bool switchStatus);
 
-     bool public running;
-     bool public status;
+    bool public running;
 
     function Stoppable() public {
         running = true;
-        status = false;
     }
 
     modifier onlyIfRunning {
@@ -24,15 +21,10 @@ import "./Owned.sol";
         _;
     }
 
-    function controlSwitch(bool onOff) public onlyOwner {
-        running = onOff;
+    function controlSwitch(bool _onOff) public onlyOwner {
+        running = _onOff;
 
         emit LogSwitchStatus(running);
     }
 
-    function checkLicense(bool _status) public onlyOwner {
-        status = _status;
-
-        emit DoctorLicense(status);
-    }
  }

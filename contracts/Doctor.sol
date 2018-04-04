@@ -13,6 +13,7 @@ contract Doctor is Stoppable {
 
     address public doctor;
     address public preDoctor;
+    bool public doctorLicense;
 
     modifier onlyDoctor{
         require(msg.sender == doctor);
@@ -20,19 +21,20 @@ contract Doctor is Stoppable {
     }
 
     function Doctor() public {
+        doctorLicense = false;
         preDoctor = msg.sender;
-        enrollDoctor();
     }
 
-    function enrollDoctor() public {
-        require(status);
+    function enrollDoctor(bool _license) public onlyOwner {
+        doctorLicense = _license;
+        require(doctorLicense);
         emit LogEnrollDoctor(preDoctor);
 
         doctor = preDoctor;
         preDoctor = 0x0;
     }
 
-    function deleteDoctor(address delDoctor) public onlyDoctor {
+    function deleteDoctor(address delDoctor) public onlyOwner onlyDoctor {
         emit LogDeleteDoctor(delDoctor);
 
         doctor = 0x0;
