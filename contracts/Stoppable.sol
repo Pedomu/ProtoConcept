@@ -1,17 +1,18 @@
 pragma solidity ^0.4.20;
 
 import "./Owned.sol";
-import "./Doctor.sol";
 
 /**
  *Base for contracts that can stopped/resumed.
  */
 
- contract Stoppable is Owned, Doctor {
+ contract Stoppable is Owned {
 
-    event LogSwitchStatus(bool SwitchStatus);
+     event LogSwitchStatus(bool switchStatus);
+     event DoctorLicense(bool doctorStatus);
 
-    bool public running;
+     bool public running;
+     bool public status;
 
     function Stoppable() public {
         running = true;
@@ -26,5 +27,11 @@ import "./Doctor.sol";
         running = onOff;
 
         emit LogSwitchStatus(running);
+    }
+
+    function checkLicense(bool _status) public onlyOwner {
+        status = _status;
+
+        emit DoctorLicense(status);
     }
  }

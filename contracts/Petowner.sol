@@ -19,7 +19,7 @@ contract Petowner {
         _;
     }
 
-    function Owned(string _petOwnerName, string _petOwnerEmail, string _petOwnerPhone) public {
+    function Petowner(string _petOwnerName, string _petOwnerEmail, string _petOwnerPhone) public {
         petOwner = msg.sender;
         petOwnerName = _petOwnerName;
         petOwnerEmail = _petOwnerEmail;
