@@ -22,7 +22,7 @@ import "./Doctor.sol";
         _;
     }
 
-    function controlSwitch(bool onOff) public onlyOwner onlyDoctor {
+    function controlSwitch(bool onOff) public onlyOwner {
         running = onOff;
 
         emit LogSwitchStatus(running);
