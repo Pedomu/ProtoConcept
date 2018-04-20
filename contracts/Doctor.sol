@@ -28,7 +28,7 @@ contract Doctor is Stoppable {
     function enrollDoctor(bool _license) public onlyOwner {
         doctorLicense = _license;
         require(doctorLicense);
-        emit LogEnrollDoctor( preDoctor);
+        emit LogEnrollDoctor(preDoctor);
 
         doctor = preDoctor;
         preDoctor = 0x0;
