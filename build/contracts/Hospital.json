@@ -1,0 +1,839 @@
+{
+  "contractName": "Hospital",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petOwnerPhone",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_onOff",
+          "type": "bool"
+        }
+      ],
+      "name": "controlSwitch",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "medicalChart",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "preDoctor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "delDoctor",
+          "type": "address"
+        }
+      ],
+      "name": "deleteDoctor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petName",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petAddress",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "doctor",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petAges",
+      "outputs": [
+        {
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "owner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "changeOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "doctorLicense",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petOwner",
+      "outputs": [
+        {
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_deletePetOwner",
+          "type": "address"
+        }
+      ],
+      "name": "deleteOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petOwnerName",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_newPetOwner",
+          "type": "address"
+        },
+        {
+          "name": "_newPetOwnerName",
+          "type": "string"
+        },
+        {
+          "name": "_newPetOwnerEmail",
+          "type": "string"
+        },
+        {
+          "name": "_newPetOwnerPhone",
+          "type": "string"
+        }
+      ],
+      "name": "changePetOwner",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [],
+      "name": "deletePet",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_license",
+          "type": "bool"
+        }
+      ],
+      "name": "enrollDoctor",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "running",
+      "outputs": [
+        {
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "petOwnerEmail",
+      "outputs": [
+        {
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "constant": false,
+      "inputs": [
+        {
+          "name": "_petName",
+          "type": "string"
+        },
+        {
+          "name": "_petAges",
+          "type": "uint256"
+        }
+      ],
+      "name": "registerPet",
+      "outputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "payable": false,
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "petNameInfo",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "petAgeInfo",
+          "type": "uint256"
+        },
+        {
+          "indexed": false,
+          "name": "petAndOwnerAddress",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "petOwnerNameInfo",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "petOwnerPhoneInfo",
+          "type": "string"
+        }
+      ],
+      "name": "PetInformation",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "deletePetName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "deletePetAddress",
+          "type": "address"
+        }
+      ],
+      "name": "PetDelete",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "oldOwnerName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "oldOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newOwnerName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogNewPetOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "killOwnerName",
+          "type": "string"
+        },
+        {
+          "indexed": false,
+          "name": "killOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogDeletePetOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "doctorAccount",
+          "type": "address"
+        }
+      ],
+      "name": "LogEnrollDoctor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "delDoctorAccount",
+          "type": "address"
+        }
+      ],
+      "name": "LogDeleteDoctor",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "switchStatus",
+          "type": "bool"
+        }
+      ],
+      "name": "LogSwitchStatus",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "oldOwner",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "name": "newOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogNewOwner",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "name": "deleteOwner",
+          "type": "address"
+        }
+      ],
+      "name": "LogDeleteOwner",
+      "type": "event"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "sourceMap": "",
+  "deployedSourceMap": "",
+  "source": "pragma solidity ^0.4.20;\n\nimport \"./Doctor.sol\";\nimport \"./Pet.sol\";\nimport \"./Medical.sol\";\n\n/**\n *Base for contract that work with the abstraction of animal hospital.\n */\n\ncontract Hospital is Doctor, Pet, Medical {\n\n    function Hospital() public {\n\n    }\n\n}\n",
+  "sourcePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Hospital.sol",
+  "ast": {
+    "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Hospital.sol",
+    "exportedSymbols": {
+      "Hospital": [
+        105
+      ]
+    },
+    "id": 106,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 91,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Doctor.sol",
+        "file": "./Doctor.sol",
+        "id": 92,
+        "nodeType": "ImportDirective",
+        "scope": 106,
+        "sourceUnit": 90,
+        "src": "26:22:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Pet.sol",
+        "file": "./Pet.sol",
+        "id": 93,
+        "nodeType": "ImportDirective",
+        "scope": 106,
+        "sourceUnit": 344,
+        "src": "49:19:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Medical.sol",
+        "file": "./Medical.sol",
+        "id": 94,
+        "nodeType": "ImportDirective",
+        "scope": 106,
+        "sourceUnit": 115,
+        "src": "69:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 95,
+              "name": "Doctor",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 89,
+              "src": "195:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Doctor_$89",
+                "typeString": "contract Doctor"
+              }
+            },
+            "id": 96,
+            "nodeType": "InheritanceSpecifier",
+            "src": "195:6:1"
+          },
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 97,
+              "name": "Pet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 343,
+              "src": "203:3:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Pet_$343",
+                "typeString": "contract Pet"
+              }
+            },
+            "id": 98,
+            "nodeType": "InheritanceSpecifier",
+            "src": "203:3:1"
+          },
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 99,
+              "name": "Medical",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 114,
+              "src": "208:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Medical_$114",
+                "typeString": "contract Medical"
+              }
+            },
+            "id": 100,
+            "nodeType": "InheritanceSpecifier",
+            "src": "208:7:1"
+          }
+        ],
+        "contractDependencies": [
+          89,
+          114,
+          245,
+          343,
+          485,
+          529
+        ],
+        "contractKind": "contract",
+        "documentation": "ase for contract that work with the abstraction of animal hospital.",
+        "fullyImplemented": false,
+        "id": 105,
+        "linearizedBaseContracts": [
+          105,
+          114,
+          343,
+          485,
+          89,
+          529,
+          245
+        ],
+        "name": "Hospital",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "250:8:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Hospital",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "240:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "250:0:1"
+            },
+            "scope": 105,
+            "src": "223:35:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 106,
+        "src": "174:87:1"
+      }
+    ],
+    "src": "0:262:1"
+  },
+  "legacyAST": {
+    "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Hospital.sol",
+    "exportedSymbols": {
+      "Hospital": [
+        105
+      ]
+    },
+    "id": 106,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 91,
+        "literals": [
+          "solidity",
+          "^",
+          "0.4",
+          ".20"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:24:1"
+      },
+      {
+        "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Doctor.sol",
+        "file": "./Doctor.sol",
+        "id": 92,
+        "nodeType": "ImportDirective",
+        "scope": 106,
+        "sourceUnit": 90,
+        "src": "26:22:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Pet.sol",
+        "file": "./Pet.sol",
+        "id": 93,
+        "nodeType": "ImportDirective",
+        "scope": 106,
+        "sourceUnit": 344,
+        "src": "49:19:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "absolutePath": "/Users/sangphilkim/Smart/Pedomu/contracts/Medical.sol",
+        "file": "./Medical.sol",
+        "id": 94,
+        "nodeType": "ImportDirective",
+        "scope": 106,
+        "sourceUnit": 115,
+        "src": "69:23:1",
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "baseContracts": [
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 95,
+              "name": "Doctor",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 89,
+              "src": "195:6:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Doctor_$89",
+                "typeString": "contract Doctor"
+              }
+            },
+            "id": 96,
+            "nodeType": "InheritanceSpecifier",
+            "src": "195:6:1"
+          },
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 97,
+              "name": "Pet",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 343,
+              "src": "203:3:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Pet_$343",
+                "typeString": "contract Pet"
+              }
+            },
+            "id": 98,
+            "nodeType": "InheritanceSpecifier",
+            "src": "203:3:1"
+          },
+          {
+            "arguments": [],
+            "baseName": {
+              "contractScope": null,
+              "id": 99,
+              "name": "Medical",
+              "nodeType": "UserDefinedTypeName",
+              "referencedDeclaration": 114,
+              "src": "208:7:1",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_Medical_$114",
+                "typeString": "contract Medical"
+              }
+            },
+            "id": 100,
+            "nodeType": "InheritanceSpecifier",
+            "src": "208:7:1"
+          }
+        ],
+        "contractDependencies": [
+          89,
+          114,
+          245,
+          343,
+          485,
+          529
+        ],
+        "contractKind": "contract",
+        "documentation": "ase for contract that work with the abstraction of animal hospital.",
+        "fullyImplemented": false,
+        "id": 105,
+        "linearizedBaseContracts": [
+          105,
+          114,
+          343,
+          485,
+          89,
+          529,
+          245
+        ],
+        "name": "Hospital",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "body": {
+              "id": 103,
+              "nodeType": "Block",
+              "src": "250:8:1",
+              "statements": []
+            },
+            "documentation": null,
+            "id": 104,
+            "implemented": true,
+            "isConstructor": true,
+            "isDeclaredConst": false,
+            "modifiers": [],
+            "name": "Hospital",
+            "nodeType": "FunctionDefinition",
+            "parameters": {
+              "id": 101,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "240:2:1"
+            },
+            "payable": false,
+            "returnParameters": {
+              "id": 102,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "250:0:1"
+            },
+            "scope": 105,
+            "src": "223:35:1",
+            "stateMutability": "nonpayable",
+            "superFunction": null,
+            "visibility": "public"
+          }
+        ],
+        "scope": 106,
+        "src": "174:87:1"
+      }
+    ],
+    "src": "0:262:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.4.21+commit.dfe3193c.Emscripten.clang"
+  },
+  "networks": {},
+  "schemaVersion": "2.0.0",
+  "updatedAt": "2018-04-20T07:45:10.607Z"
+}
